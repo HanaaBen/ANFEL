@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" minHeight="500.0" minWidth="700.0" prefHeight="700.0" prefWidth="1000.0" stylesheets="@../Styles/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.TableController">
+    <children>
+      <VBox alignment="TOP_CENTER" layoutX="38.0" layoutY="171.0" prefHeight="200.0" prefWidth="770.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="426.0">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                     <children>
+                        <VBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="452.0">
+                           <children>
+                              <JFXButton fx:id="getAjouter" alignment="CENTER" contentDisplay="CENTER" onAction="#getAjouterEtudiant" prefHeight="28.0" prefWidth="172.0" style="-fx-background-color: #5fd8bc9e;" text="اضافة طالبة" textAlignment="CENTER">
+                                 
+                                 <VBox.margin>
+                                    <Insets left="20.0" />
+                                 </VBox.margin>
+                              </JFXButton>
+                              <JFXButton fx:id="getAjouterMulti" alignment="CENTER" contentDisplay="CENTER" onAction="#getAjouterEtudiantM" prefHeight="28.0" prefWidth="172.0" style="-fx-background-color: #b3e0ca;" text="اضافة عدة طالبات" textAlignment="CENTER">
+                                 <VBox.margin>
+                                    <Insets left="20.0" />
+                                 </VBox.margin>
+                              </JFXButton>
+                              <JFXButton fx:id="getAjouterG" alignment="CENTER" contentDisplay="CENTER" onAction="#getAjouterGroup" prefHeight="28.0" prefWidth="172.0" style="-fx-background-color: #5fd8bc9e;" text="اضافة حلقة" textAlignment="CENTER">
+                                 <VBox.margin>
+                                    <Insets left="20.0" />
+                                 </VBox.margin>
+                              </JFXButton>
+                           </children>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="389.0">
+                     <children>
+                        <TextField fx:id="txt_filteredData" alignment="TOP_CENTER" prefHeight="25.0" prefWidth="227.0">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </TextField>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="28.0" prefWidth="116.0" text="بحث" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+              <TableView fx:id="table_Etudiants" depthTest="ENABLE" editable="true" nodeOrientation="RIGHT_TO_LEFT" prefHeight="350.0" prefWidth="840.0" tableMenuButtonVisible="true" VBox.vgrow="ALWAYS">
+                  <columns>
+                      <TableColumn fx:id="Numero" prefWidth="50.0" text="#" />
+                      <TableColumn fx:id="IdEtudiant" editable="false" prefWidth="75.0" text="ID Etudiant" visible="false" />
+                      <TableColumn fx:id="Nom" prefWidth="179.0" text="الطالبة" />
+                      <TableColumn fx:id="Groupe" prefWidth="179.0" text="الحلقة" />
+                      <TableColumn fx:id="UniteAv" prefWidth="179.0" text="مقدار الحفظ" />
+                  <TableColumn fx:id="DureeAV" prefWidth="179.0" text="المدة" />
+                  <TableColumn fx:id="Operations" prefWidth="179.0" text="..." />
+                  </columns>
+             
+               <VBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </VBox.margin>
+         
+           
+              </TableView>
+         </children>
+      </VBox>
+    </children>
+</AnchorPane>
